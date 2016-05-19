@@ -7,6 +7,8 @@ defmodule PhoenixRatchet.Mixfile do
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: description,
+     package: package,
      deps: deps]
   end
 
@@ -31,6 +33,22 @@ defmodule PhoenixRatchet.Mixfile do
       {:phoenix, "~> 1.1"},
       {:phoenix_html, "~> 2.5"},
       {:ratchet, "~> 0.0.4"},
+    ]
+  end
+
+  defp description do
+    """
+    Phoenix template engine for Ratchet
+    """
+  end
+
+  defp package do
+    [
+      name: :phoenix_ratchet,
+      files: ~w(lib config mix.exs README.md),
+      maintainers: ["Jay Hayes"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/iamvery/phoenix_ratchet"},
     ]
   end
 end
