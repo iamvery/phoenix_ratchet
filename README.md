@@ -1,6 +1,11 @@
 # Phoenix Ratchet
 
-[![Build Status](https://travis-ci.org/iamvery/phoenix_ratchet.svg?branch=master)](https://travis-ci.org/iamvery/phoenix_ratchet)
+[![Build Status][travis-img]][travis] [![Hex Version][hex-img]][hex]
+
+[travis-img]: https://travis-ci.org/iamvery/phoenix_ratchet.svg?branch=master
+[travis]: https://travis-ci.org/iamvery/phoenix_ratchet
+[hex-img]: https://img.shields.io/hexpm/v/phoenix_ratchet.svg
+[hex]: https://hex.pm/packages/phoenix_ratchet
 
 A [Phoenix][phoenix] template engine for [Ratchet][ratchet].
 
