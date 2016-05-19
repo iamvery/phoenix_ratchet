@@ -1,20 +1,30 @@
-# PhoenixRatchet
+# Phoenix Ratchet
 
-**TODO: Add description**
+[![Build Status](https://travis-ci.org/iamvery/phoenix_ratchet.svg?branch=master)](https://travis-ci.org/iamvery/phoenix_ratchet)
 
-## Installation
+A [Phoenix][phoenix] template engine for [Ratchet][ratchet].
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+## Usage
 
-  1. Add phoenix_ratchet to your list of dependencies in `mix.exs`:
+1. Install with [Hex][hex]:
 
-        def deps do
-          [{:phoenix_ratchet, "~> 0.0.1"}]
-        end
+   ```elixir
+   def deps do
+     [{:ratchet, "~> 0.0.1"}]
+   end
+   ```
 
-  2. Ensure phoenix_ratchet is started before your application:
+1. Configure Phoenix in `config/config.exs` to use the Ratchet engine:
 
-        def application do
-          [applications: [:phoenix_ratchet]]
-        end
+   ```
+   config :phoenix, :template_engines,
+     ratchet: Ratchet.Phoenix.Engine
+   ```
 
+An example project can be found at [iamvery/example-ratchet-app][example].
+
+
+[phoenix]: http://www.phoenixframework.org/
+[ratchet]: https://github.com/iamvery/ratchet
+[hex]: https://hex.pm/
+[example]: https://github.com/iamvery/example-ratchet-app
