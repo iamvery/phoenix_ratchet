@@ -21,7 +21,7 @@ A [Phoenix][phoenix] template engine for [Ratchet][ratchet].
 
 1. Configure Phoenix in `config/config.exs` to use the Ratchet engine:
 
-   ```
+   ```elixir
    config :phoenix, :template_engines,
      ratchet: Ratchet.Phoenix.Engine
    ```
