@@ -1,0 +1,2 @@
+defmodule PhoenixRatchet do
+end
