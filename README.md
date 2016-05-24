@@ -15,7 +15,7 @@ A [Phoenix][phoenix] template engine for [Ratchet][ratchet].
 
    ```elixir
    def deps do
-     [{:ratchet, "~> 0.0.1"}]
+     [{:ratchet, "~> 0.1.0"}]
    end
    ```
 
