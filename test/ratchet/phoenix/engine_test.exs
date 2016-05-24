@@ -11,9 +11,9 @@ defmodule Ratchet.Phoenix.EngineTest do
   end
 
   test "render a ratchet template" do
-    data = %{post: %{title: "OHAI", body: "COOL"}}
+    data = %{post: %{title: {"OHAI", class: "large"}, body: "COOL"}}
     result = View.render(TestView, "posts.html", data: data) |> Phoenix.HTML.safe_to_string
 
-    assert result == ~S(<section><article data-scope="post"><h1 data-prop="title">OHAI</h1><p data-prop="body">COOL</p></article></section>)
+    assert result == ~S(<section><article data-scope="post"><h1 class="large" data-prop="title">OHAI</h1><p data-prop="body">COOL</p></article></section>)
   end
 end

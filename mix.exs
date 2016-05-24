@@ -32,7 +32,7 @@ defmodule PhoenixRatchet.Mixfile do
     [
       {:phoenix, "~> 1.1"},
       {:phoenix_html, "~> 2.5"},
-      {:ratchet, "~> 0.0.4"},
+      {:ratchet, ">= 0.2.0"},
       {:ex_doc, ">= 0.0.0", only: :dev},
     ]
   end
