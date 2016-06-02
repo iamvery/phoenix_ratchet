@@ -1,5 +1,5 @@
 <section>
-  <article data-scope="post">
+  <article data-prop="post">
     <h1 data-prop="title"></h1>
     <p data-prop="body"></p>
   </article>
