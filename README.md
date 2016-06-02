@@ -11,7 +11,7 @@ A [Phoenix][phoenix] template engine for [Ratchet][ratchet].
 
 ## Usage
 
-1. Install with [Hex][hex]:
+1. Install with Hex:
 
    ```elixir
    def deps do
@@ -31,5 +31,4 @@ An example project can be found at [iamvery/example-ratchet-app][example].
 
 [phoenix]: http://www.phoenixframework.org/
 [ratchet]: https://github.com/iamvery/ratchet
-[hex]: https://hex.pm/
 [example]: https://github.com/iamvery/example-ratchet-app
