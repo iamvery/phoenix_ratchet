@@ -9,6 +9,8 @@
 
 A [Phoenix][phoenix] template engine for [Ratchet][ratchet].
 
+View the [Documentation][docs].
+
 ## Usage
 
 1. Install with Hex:
@@ -32,3 +34,4 @@ An example project can be found at [iamvery/example-ratchet-app][example].
 [phoenix]: http://www.phoenixframework.org/
 [ratchet]: https://github.com/iamvery/ratchet
 [example]: https://github.com/iamvery/example-ratchet-app
+[docs]: https://hexdocs.pm/phoenix_ratchet
