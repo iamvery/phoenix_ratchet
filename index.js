@@ -1,0 +1,20 @@
+var Socket = require('phoenix').Socket;
+var RatchetLib = require('ratchetjs');
+var Ratchet = RatchetLib.Ratchet;
+var PhoenixAdapter = RatchetLib.PhoenixAdapter;
+
+var socket = new Socket('/data');
+socket.connect();
+
+function channelInit(property) {
+  var topic = "data:" + property;
+  var channel = socket.channel(topic);
+
+  channel.join()
+    .receive("ok", function(resp) { console.log("Joined \"" + topic + "\"") })
+    .receive("error", function(resp) { console.log("Unable to join \"" + topic + "\"") });
+
+  return new PhoenixAdapter(channel);
+}
+
+Ratchet.init({channelInit: channelInit});

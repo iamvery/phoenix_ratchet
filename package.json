@@ -1,0 +1,10 @@
+{
+  "name": "phoenix_ratchet",
+  "version": "0.1.0",
+  "description": "Integrates Elixir Phoenix with Ratchet client library.",
+  "author": "Jay Hayes (iamvery.com)",
+  "license": "MIT",
+  "dependencies": {
+    "ratchetjs": "^0.1.0"
+  }
+}

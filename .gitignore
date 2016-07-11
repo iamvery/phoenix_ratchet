@@ -2,5 +2,6 @@
 /cover
 /deps
 /doc
+/node_modules
 erl_crash.dump
 *.ez
