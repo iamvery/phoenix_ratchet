@@ -18,6 +18,8 @@ defmodule Ratchet.Mutable do
   end
 
   def broadcast(endpoint, scope, data) do
+    # data in this case may not be serializable to JSON. e.g. some valid
+    # ratchet data contains tuples which cannot be serialized with Poison
     endpoint.broadcast "data:#{scope}", "data", %{scope => data}
   end
 end
