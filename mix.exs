@@ -12,7 +12,7 @@ defmodule PhoenixRatchet.Mixfile do
      description: description,
      package: package,
      docs: [
-       extras: ["README.md"],
+       extras: ["README.md", "package.json", "index.js"],
        main: "readme",
        source_ref: "v#{@version}",
        source_url: "https://github.com/iamvery/phoenix_ratchet",
@@ -40,7 +40,7 @@ defmodule PhoenixRatchet.Mixfile do
     [
       {:phoenix, "~> 1.1"},
       {:phoenix_html, "~> 2.5"},
-      {:ratchet, ">= 0.3.0"},
+      {:ratchet, github: "iamvery/ratchet", branch: "data"},
       {:ex_doc, ">= 0.0.0", only: :dev},
     ]
   end
