@@ -12,7 +12,7 @@ defmodule PhoenixRatchet.Mixfile do
      description: description,
      package: package,
      docs: [
-       extras: ["README.md", "package.json", "index.js"],
+       extras: ["README.md"],
        main: "readme",
        source_ref: "v#{@version}",
        source_url: "https://github.com/iamvery/phoenix_ratchet",
@@ -54,7 +54,7 @@ defmodule PhoenixRatchet.Mixfile do
   defp package do
     [
       name: :phoenix_ratchet,
-      files: ~w(lib config mix.exs README.md),
+      files: ~w(lib config mix.exs index.js package.json README.md),
       maintainers: ["Jay Hayes"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/iamvery/phoenix_ratchet"},
