@@ -30,6 +30,16 @@ View the [Documentation][docs].
 
 An example project can be found at [iamvery/example-ratchet-app][example].
 
+## Release
+
+1. Bump the version in `mix.exs`.
+1. Commit version with Git tag `vX.X.X`.
+1. Publish to Hex
+
+   ```
+   $ mix do hex.publish, hex.docs
+   ```
+
 
 [phoenix]: http://www.phoenixframework.org/
 [ratchet]: https://github.com/iamvery/ratchet
