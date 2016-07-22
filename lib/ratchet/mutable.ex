@@ -1,4 +1,6 @@
 defmodule Ratchet.Mutable do
+  @event "data"
+
   defmacro __using__(opts) do
     quote do
       Module.put_attribute(__MODULE__, :endpoint, unquote(opts[:endpoint]))
@@ -20,6 +22,6 @@ defmodule Ratchet.Mutable do
   def broadcast(endpoint, scope, data) do
     # data in this case may not be serializable to JSON. e.g. some valid
     # ratchet data contains tuples which cannot be serialized with Poison
-    endpoint.broadcast "data:#{scope}", "data", %{scope => data}
+    endpoint.broadcast "data:#{scope}", @event, %{scope => data}
   end
 end
