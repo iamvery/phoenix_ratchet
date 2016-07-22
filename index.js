@@ -3,6 +3,7 @@ var RatchetLib = require('ratchetjs');
 var Ratchet = RatchetLib.Ratchet;
 var PhoenixAdapter = RatchetLib.PhoenixAdapter;
 
+// TODO make socket configurable
 var socket = new Socket('/data');
 socket.connect();
 

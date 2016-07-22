@@ -9,7 +9,7 @@ defmodule Ratchet.Mutable do
   defmacro action(name, [mutates: scopes], do: body) do
     quote do
       def unquote(name)(var!(params)) do
-        unquote(body)
+        unquote(body) # TODO verify this complete successfully
         Enum.each unquote(scopes), fn {scope, data} ->
           broadcast @endpoint, scope, data
         end
