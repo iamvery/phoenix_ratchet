@@ -4,6 +4,12 @@ defmodule Ratchet.Plug.Data do
   defmacro __using__([for: property]) do
     quote do
       def property, do: unquote(property)
+
+      @behaviour Plug
+      def init(_opts), do: false
+      def call(conn, _opts) do
+        unquote(__MODULE__).merge(conn, %{property => data(conn)})
+      end
     end
   end
 
