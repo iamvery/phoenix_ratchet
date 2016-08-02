@@ -7,13 +7,15 @@ defmodule Ratchet.ActionTest do
     import Action
 
     action :create do
-      conn.value
+      conn.assigns.value
     end
   end
 
   describe "create action" do
+    @conn %Plug.Conn{assigns: %{value: :foo}}
+
     test "returns result of body" do
-      result = Foo.create(%{value: :foo})
+      result = Foo.create(@conn)
 
       assert result == :foo
     end
