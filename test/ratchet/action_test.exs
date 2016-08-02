@@ -6,10 +6,13 @@ defmodule Ratchet.ActionTest do
   defmodule Endpoint do
   end
 
+  defmodule Data do
+  end
+
   defmodule Foo do
     use Action, endpoint: Endpoint
 
-    action :create do
+    action :create, changes: [Data] do
       conn.assigns.value
     end
   end

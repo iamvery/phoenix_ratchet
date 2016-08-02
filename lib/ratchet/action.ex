@@ -8,7 +8,7 @@ defmodule Ratchet.Action do
     end
   end
 
-  defmacro action(event, do: body) do
+  defmacro action(event, [changes: builders], do: body) do
     quote do
       def unquote(event)(var!(conn)) do
         unquote(body)
