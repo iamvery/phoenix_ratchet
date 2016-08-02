@@ -15,4 +15,15 @@ defmodule Ratchet.Plug.Data do
   def call(conn, _opts) do
     update_in conn.assigns, &Map.put(&1, :data, %{})
   end
+
+  @doc """
+  Merge new data into existing
+
+      iex> conn = %Plug.Conn{assigns: %{data: %{foo: "bar"}}}
+      iex> Data.merge(conn, %{baz: "qux"})
+      %Plug.Conn{assigns: %{data: %{foo: "bar", baz: "qux"}}}
+  """
+  def merge(conn, data) do
+    update_in conn.assigns.data, &Map.merge(&1, data)
+  end
 end
