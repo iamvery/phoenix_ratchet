@@ -4,9 +4,14 @@ defmodule Ratchet.ActionTest do
   doctest Action
 
   defmodule Endpoint do
+    def broadcast(topic, event, payload) do
+      send self, {topic, event, payload}
+    end
   end
 
   defmodule Data do
+    use Ratchet.Plug.Data, for: :foo
+    def data(_conn), do: "foo data"
   end
 
   defmodule Foo do
@@ -26,8 +31,11 @@ defmodule Ratchet.ActionTest do
       assert result == :foo
     end
 
-    @tag :skip
-    test "broadcasts data on endpoint"
+    test "broadcasts data on endpoint" do
+      Foo.create(@conn)
+
+      assert_receive {"data:foo", "data", %{foo: "foo data"}}
+    end
 
     @tag :skip
     test "does not broadcast when result fails"
