@@ -50,6 +50,7 @@ defmodule Ratchet.Plug.Data do
       def property, do: unquote(property)
 
       def scopes(_conn), do: []
+      defoverridable [scopes: 1]
 
       def topic(conn) do
         scopes(conn)
