@@ -3,8 +3,11 @@ defmodule Ratchet.ActionTest do
   alias Ratchet.Action
   doctest Action
 
+  defmodule Endpoint do
+  end
+
   defmodule Foo do
-    use Action
+    use Action, endpoint: Endpoint
 
     action :create do
       conn.assigns.value

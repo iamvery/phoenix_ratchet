@@ -1,8 +1,9 @@
 defmodule Ratchet.Action do
   @moduledoc "TODO"
 
-  defmacro __using__([]) do
+  defmacro __using__([endpoint: endpoint]) do
     quote do
+      Module.put_attribute(__MODULE__, :endpoint, unquote(endpoint))
       import unquote(__MODULE__)
     end
   end
