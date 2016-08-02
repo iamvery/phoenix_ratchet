@@ -1,6 +1,12 @@
 defmodule Ratchet.Plug.Data do
   @moduledoc "TODO"
 
+  defmacro __using__([for: property]) do
+    quote do
+      def property, do: unquote(property)
+    end
+  end
+
   @behaviour Plug
 
   def init(_opts), do: false
