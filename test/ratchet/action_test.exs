@@ -4,7 +4,7 @@ defmodule Ratchet.ActionTest do
   doctest Action
 
   defmodule Foo do
-    import Action
+    use Action
 
     action :create do
       conn.assigns.value
