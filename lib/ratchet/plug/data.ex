@@ -1,8 +1,12 @@
 defmodule Ratchet.Plug.Data do
   @moduledoc "TODO"
 
+  @callback data(Plug.Conn.t) :: any
+
   defmacro __using__([for: property]) do
     quote do
+      @behaviour unquote(__MODULE__)
+
       def property, do: unquote(property)
 
       @behaviour Plug
