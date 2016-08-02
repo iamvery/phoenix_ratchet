@@ -19,4 +19,10 @@ defmodule Ratchet.Plug.DataTest do
 
     assert conn == %Plug.Conn{assigns: %{data: %{bar: "value", foos: "foo value"}}}
   end
+
+  describe "topic" do
+    test "has no scopes by default" do
+      assert Foo.topic(@conn) == "data:foos"
+    end
+  end
 end

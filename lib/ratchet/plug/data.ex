@@ -49,6 +49,13 @@ defmodule Ratchet.Plug.Data do
 
       def property, do: unquote(property)
 
+      def scopes(_conn), do: []
+
+      def topic(conn) do
+        scopes(conn)
+        |> Ratchet.Phoenix.DataChannel.topic(property)
+      end
+
       @behaviour Plug
       def init(_opts), do: false
       def call(conn, _opts) do
