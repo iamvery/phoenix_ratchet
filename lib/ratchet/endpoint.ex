@@ -1,4 +1,6 @@
 defmodule Ratchet.Endpoint do
+  @moduledoc "TODO"
+
   defmacro __using__(_) do
     quote do
       # TODO make socket configurable

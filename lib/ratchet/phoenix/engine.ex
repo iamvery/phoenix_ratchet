@@ -1,4 +1,6 @@
 defmodule Ratchet.Phoenix.Engine do
+  @moduledoc "TODO"
+
   @behaviour Phoenix.Template.Engine
 
   import Ratchet.Renderer, only: [parse: 1, compile: 1]

@@ -1,4 +1,6 @@
 defmodule Ratchet.Phoenix.DataSocket do
+  @moduledoc "TODO"
+
   use Phoenix.Socket
   import Ratchet.Phoenix.DataChannel, only: [prefix: 0]
 
