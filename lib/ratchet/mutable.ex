@@ -2,6 +2,7 @@ defmodule Ratchet.Mutable do
   @event "data"
 
   import Ratchet.Phoenix.DataChannel, only: [prefix: 0]
+  import Ratchet.Payload
 
   defmacro __using__(opts) do
     quote do
@@ -22,8 +23,6 @@ defmodule Ratchet.Mutable do
   end
 
   def broadcast(endpoint, scope, data) do
-    # data in this case may not be serializable to JSON. e.g. some valid
-    # ratchet data contains tuples which cannot be serialized with Poison
-    endpoint.broadcast "#{prefix}:#{scope}", @event, %{scope => data}
+    endpoint.broadcast "#{prefix}:#{scope}", @event, %{scope => prepare(data)}
   end
 end
