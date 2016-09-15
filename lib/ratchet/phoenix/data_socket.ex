@@ -1,5 +1,7 @@
 defmodule Ratchet.Phoenix.DataSocket do
-  @moduledoc "TODO"
+  @moduledoc """
+  This is the Phoenix.Socket used by the Ratchet.Endpoint socket.
+  """
 
   use Phoenix.Socket
   import Ratchet.Phoenix.DataChannel, only: [prefix: 0]

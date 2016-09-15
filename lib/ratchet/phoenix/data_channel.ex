@@ -1,5 +1,7 @@
 defmodule Ratchet.Phoenix.DataChannel do
-  @moduledoc "TODO"
+  @moduledoc """
+  This is the Phoenix.Channel used by Ratchet.Phoenix.Socket.
+  """
 
   use Phoenix.Channel
 
