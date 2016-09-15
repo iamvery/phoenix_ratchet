@@ -11,7 +11,7 @@ defmodule Ratchet.ActionTest do
 
   defmodule Data do
     use Ratchet.Plug.Data, for: :foo
-    def data(_conn), do: "foo data"
+    def data(_conn), do: {"foo data", lol: "wat"}
   end
 
   defmodule Foo do
@@ -34,7 +34,7 @@ defmodule Ratchet.ActionTest do
     test "broadcasts data on endpoint" do
       Foo.create(@conn)
 
-      assert_receive {"data:foo", "data", %{foo: "foo data"}}
+      assert_receive {"data:foo", "data", %{foo: %{_content_: "foo data", _attrs_: %{_attrs_: true, lol: "wat"}}}}
     end
 
     @tag :skip

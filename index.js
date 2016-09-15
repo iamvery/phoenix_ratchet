@@ -7,8 +7,7 @@ var PhoenixAdapter = RatchetLib.PhoenixAdapter;
 var socket = new Socket('/ratchet');
 socket.connect();
 
-function channelInit(property) {
-  var topic = "data:" + property; // This prefix must always be synchronized with the DataChannel
+function channelInit(topic) {
   var channel = socket.channel(topic);
 
   channel.join()

@@ -1,6 +1,8 @@
 defmodule Ratchet.Action do
   @moduledoc "TODO"
 
+  import Ratchet.Payload
+
   defmacro __using__([endpoint: endpoint]) do
     quote do
       Module.put_attribute(__MODULE__, :endpoint, unquote(endpoint))
@@ -29,6 +31,6 @@ defmodule Ratchet.Action do
   end
 
   def broadcast(endpoint, topic, event, payload) do
-    endpoint.broadcast(topic, event, payload)
+    endpoint.broadcast(topic, event, prepare(payload))
   end
 end
