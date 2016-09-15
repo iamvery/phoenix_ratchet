@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - This changelog (https://github.com/iamvery/phoenix_ratchet/issues/6)
 
+### Changed
+- Some general housekeeping
+
 ## [0.3.1] - 2016-07-19
 ## [0.3.0] - 2016-07-19
 ## [0.2.0] - 2016-07-01
