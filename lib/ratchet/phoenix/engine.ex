@@ -1,5 +1,7 @@
 defmodule Ratchet.Phoenix.Engine do
-  @moduledoc "TODO"
+  @moduledoc """
+  This is the Phoenix.Template.Engine that allows Ratchet templates to be used with Phoenix.
+  """
 
   @behaviour Phoenix.Template.Engine
 
