@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - This changelog (https://github.com/iamvery/phoenix_ratchet/issues/6)
+- Some documentation (https://github.com/iamvery/phoenix_ratchet/pull/19)
+- Abstraction for pluggable data (https://github.com/iamvery/phoenix_ratchet/pull/15)
 
 ### Changed
 - Some general housekeeping
