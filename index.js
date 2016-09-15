@@ -4,7 +4,7 @@ var Ratchet = RatchetLib.Ratchet;
 var PhoenixAdapter = RatchetLib.PhoenixAdapter;
 
 // TODO make socket configurable
-var socket = new Socket('/data');
+var socket = new Socket('/ratchet');
 socket.connect();
 
 function channelInit(property) {

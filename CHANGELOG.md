@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Some general housekeeping
+- Rename endpoint used by Ratchet (https://github.com/iamvery/phoenix_ratchet/pull/17)
 
 ## [0.3.1] - 2016-07-19
 ## [0.3.0] - 2016-07-19
