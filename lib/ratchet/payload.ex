@@ -7,16 +7,16 @@ defmodule Ratchet.Payload do
       iex> Payload.prepare(foo: "bar")
       %{_attrs_: true, foo: "bar"}
       iex> Payload.prepare({"foo", bar: "baz"})
-      %{content: "foo", attrs: %{_attrs_: true, bar: "baz"}}
+      %{_content_: "foo", _attrs_: %{_attrs_: true, bar: "baz"}}
       iex> Payload.prepare([{"foo", bar: "baz"}])
-      [%{content: "foo", attrs: %{_attrs_: true, bar: "baz"}}]
+      [%{_content_: "foo", _attrs_: %{_attrs_: true, bar: "baz"}}]
       iex> Payload.prepare(%{foo: [bar: "baz"]})
       %{foo: %{_attrs_: true, bar: "baz"}}
   """
   def prepare({content, attributes}) do
     %{
-      content: prepare(content),
-      attrs: prepare(attributes),
+      _content_: prepare(content),
+      _attrs_: prepare(attributes),
     }
   end
 
