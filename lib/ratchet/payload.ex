@@ -1,4 +1,7 @@
 defmodule Ratchet.Payload do
+  @content_key :_content_
+  @attributes_key :_attrs_
+
   @doc """
   Prepare payload for broadcasting
 
@@ -15,8 +18,8 @@ defmodule Ratchet.Payload do
   """
   def prepare({content, attributes}) do
     %{
-      _content_: prepare(content),
-      _attrs_: prepare(attributes),
+      @content_key => prepare(content),
+      @attributes_key => prepare(attributes),
     }
   end
 
@@ -29,7 +32,7 @@ defmodule Ratchet.Payload do
   def prepare(data) when is_list(data) do
     if Keyword.keyword?(data) do
       Enum.into(data, %{})
-      |> Map.put(:_attrs_, true)
+      |> Map.put(@attributes_key, true)
     else
       Enum.map(data, &prepare/1)
     end
