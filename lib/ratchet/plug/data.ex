@@ -1,5 +1,45 @@
 defmodule Ratchet.Plug.Data do
-  @moduledoc "TODO"
+  @moduledoc """
+  This module may be used in two ways:
+
+  * As a plug to initialize ratchet data on the connection.
+  * As an extension to create your own pluggable data modules.
+
+  ## Data Initialization
+
+  To initialize data on your connection, plug this module somewhere in your stack.
+  You might do this in a Phoenix router pipeline.
+
+      defmodule YourApp.Router do
+        # ...
+        pipeline :browser do
+          # ...
+          plug Ratchet.Plug.Data
+        end
+        # ...
+      end
+
+  ## Extend Your Own Data modules
+
+  The recommended idiom for building data is by plugging so-called "data-modules" in your stack.
+  This module may be used to extend such a module.
+
+      defmodule YourApp.UserData do
+        use Ratchet.Plug.Data, for: :user
+        def data(_conn), do: %{id: 1, name: "Jay"}
+      end
+
+  Now this module may be plugged in to initialize the connection with user data.
+
+      defmodule YourApp.UserController do
+        # ...
+        plug YourData
+
+        def show(conn, _params) do
+          render conn, "show.html"
+        end
+      end
+  """
 
   @callback data(Plug.Conn.t) :: any
 
