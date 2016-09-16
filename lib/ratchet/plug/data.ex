@@ -49,11 +49,18 @@ defmodule Ratchet.Plug.Data do
 
       def property, do: unquote(property)
 
-      @behaviour Plug
-      def init(_opts), do: false
-      def call(conn, _opts) do
+      @before_compile unquote(__MODULE__)
+      use Plug.Builder
+
+      defp merge_data(conn, _opts) do
         unquote(__MODULE__).merge(conn, %{property => data(conn)})
       end
+    end
+  end
+
+  defmacro __before_compile__(_env) do
+    quote do
+      plug :merge_data
     end
   end
 
