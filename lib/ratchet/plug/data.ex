@@ -2,7 +2,7 @@ defmodule Ratchet.Plug.Data do
   @moduledoc """
   This module may be used in two ways:
 
-  * As a plug to initialize ratchet data on the connection.
+  * As a plug to initialize Ratchet data on the connection.
   * As an extension to create your own pluggable data modules.
 
   ## Data Initialization
