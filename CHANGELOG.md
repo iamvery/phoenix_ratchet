@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Some general housekeeping
 - Rename endpoint used by Ratchet (https://github.com/iamvery/phoenix_ratchet/pull/17)
 - Serialize data for the wire using special format for tuple data (https://github.com/iamvery/phoenix_ratchet/pull/14)
+- Ratchet.Plug.Data is itself pluggable (https://github.com/iamvery/phoenix_ratchet/pull/21)
 
 ## [0.3.1] - 2016-07-19
 ## [0.3.0] - 2016-07-19
