@@ -37,7 +37,7 @@ An example project can be found at [iamvery/example-ratchet-app][example].
 1. Publish to Hex
 
    ```
-   $ mix do hex.publish, hex.docs
+   $ mix hex.publish docs
    ```
 
 
