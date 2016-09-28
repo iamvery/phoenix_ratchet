@@ -1,6 +1,6 @@
 <section>
   <article data-prop="post">
-    <h1 data-prop="title"></h1>
-    <p data-prop="body"></p>
+    <h1 data-prop="title">Title</h1>
+    <p data-prop="body">Body</p>
   </article>
 </section>

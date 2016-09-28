@@ -12,7 +12,7 @@ defmodule Ratchet.Phoenix.Engine do
     path
     |> read
     |> parse
-    |> transform("assigns.data")
+    |> transform("assigns[:data]") # TODO seems peculiar that this bit is elixir code in a string. Perhaps a quoted expression would be more appropriate?
     |> compile
     |> EEx.compile_string(engine: Phoenix.HTML.Engine, file: path, line: 1)
   end

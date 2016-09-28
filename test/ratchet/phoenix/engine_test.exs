@@ -16,4 +16,10 @@ defmodule Ratchet.Phoenix.EngineTest do
 
     assert result == ~S(<section><article data-prop="post"><h1 class="large" data-prop="title">OHAI</h1><p data-prop="body">COOL</p></article></section>)
   end
+
+  test "render prototype when data is not provided" do
+    result = View.render(TestView, "posts.html", []) |> Phoenix.HTML.safe_to_string
+
+    assert result == ~S(<section><article data-prop="post"><h1 data-prop="title">Title</h1><p data-prop="body">Body</p></article></section>)
+  end
 end
