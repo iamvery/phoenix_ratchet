@@ -17,7 +17,7 @@ View the [Documentation][docs].
 
    ```elixir
    def deps do
-     [{:phoenix_ratchet, "~> 0.2.0"}]
+     [{:phoenix_ratchet, "~> 0.4"}]
    end
    ```
 
