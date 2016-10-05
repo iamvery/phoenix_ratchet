@@ -28,6 +28,21 @@ View the [Documentation][docs].
      ratchet: Ratchet.Phoenix.Engine
    ```
 
+1. Configure Phoenix in `config/dev.exs` to live reload Ratchet templates:
+
+  ```diff
+   config :blurg, Blurg.Endpoint,
+     live_reload: [
+       patterns: [
+         ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
+         ~r{priv/gettext/.*(po)$},
+         ~r{web/views/.*(ex)$},
+  -      ~r{web/templates/.*eex$}
+  +      ~r{web/templates/.*(eex|ratchet)$}
+       ]
+     ]
+  ```
+
 An example project can be found at [iamvery/example-ratchet-app][example].
 
 ## Release
