@@ -1,7 +1,7 @@
 defmodule PhoenixRatchet.Mixfile do
   use Mix.Project
 
-  @version "0.5.0"
+  @version "0.5.1"
 
   def project do
     [app: :phoenix_ratchet,
@@ -40,7 +40,7 @@ defmodule PhoenixRatchet.Mixfile do
     [
       {:phoenix, "~> 1.1"},
       {:phoenix_html, "~> 2.5"},
-      {:ratchet, ">= 0.3.0"},
+      {:ratchet, ">= 0.4.1"},
       {:ex_doc, ">= 0.0.0", only: :dev},
     ]
   end
@@ -54,7 +54,7 @@ defmodule PhoenixRatchet.Mixfile do
   defp package do
     [
       name: :phoenix_ratchet,
-      files: ~w(lib config mix.exs index.js package.json README.md),
+      files: ~w(lib config mix.exs README.md),
       maintainers: ["Jay Hayes"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/iamvery/phoenix_ratchet"},

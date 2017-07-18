@@ -15,7 +15,7 @@ defmodule Ratchet.Plug.DataTest do
   end
 
   test "property method defined" do
-    assert Foo.property == :foos
+    assert Foo.property() == :foos
   end
 
   @conn %Plug.Conn{assigns: %{data: %{}}}
