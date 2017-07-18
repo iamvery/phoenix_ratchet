@@ -53,7 +53,7 @@ defmodule Ratchet.Plug.Data do
       use Plug.Builder
 
       defp merge_data(conn, _opts) do
-        unquote(__MODULE__).merge(conn, %{property => data(conn)})
+        unquote(__MODULE__).merge(conn, %{property() => data(conn)})
       end
     end
   end
