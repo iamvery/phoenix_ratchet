@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.5.1]
+
+### Changed
+
+- Fixed Elixir 1.4 compiler warnings due to function ambiguity.
+
 ## [0.5.0]
 
 ### Added
@@ -32,7 +38,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.1.0] - 2016-05-24
 ## 0.0.1 - 2016-05-19
 
-[Unreleased]: https://github.com/iamvery/phoenix_ratchet/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/iamvery/phoenix_ratchet/compare/v0.5.1...HEAD
+[0.5.1]: https://github.com/iamvery/phoenix_ratchet/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/iamvery/phoenix_ratchet/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/iamvery/phoenix_ratchet/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/iamvery/phoenix_ratchet/compare/v0.3.0...v0.3.1
